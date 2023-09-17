@@ -6,20 +6,38 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 3fr;
+    height: 100%;
 }
 
 .header {
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+}
+
+.search, .greet {
+    display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: center;
-    background-color: red;
-    grid-template-columns: 1fr 1fr;
-    grid-column: 2 / 3;
+    gap: 5%;
+}
+
+.user-info, .buttons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5%;
 }
 
 .search {
     grid-column: 1 / 2;
     grid-row: 1;
+
 }
 
 .user-info {
@@ -32,29 +50,89 @@
     grid-row: 2;
 }
 
-.user-btns {
+.buttons {
     grid-column: 2 / 3;
     grid-row: 2;
 }
 
+.buttons button {
+    border-radius: 20px;
+    border: none;
+    padding: 5px 15px;
+    background-color: limegreen;
+    color: white;
+}
+
+#search-box {
+    border-radius: 50px;
+    background-color: lightgrey;
+    padding: 5px;
+    border: none;
+    width: 25em;
+}
+
+.img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.img2 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+}
+
 .sidebar {
     display: grid;
-    gap: 10px;
-    justify-content: center;
-    background-color: green;
+    gap: 30px;
+    justify-content: start;
+    background-color: limegreen;
+    color: white;
     grid-area: 1 / 1 / 3 / 2;
+    padding: 5px;
+}
+
+.logo {
+    text-align: center;
+}
+
+ul {
+    display: grid;
+    gap: 10px;
 }
 
 .content {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: blue;
+    padding: 24px;
+    background-color: #F0F8FF;
     grid-area: 2 / 2 / 3 / 3;
 }
 
 .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    gap: 10px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.project-title {
+    position: absolute;
 }
 
 .announcements .trending {
